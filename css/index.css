@@ -234,6 +234,9 @@ header .navbar .navbar-nav a.active {
 /* section.why-us {
     background-color: #fff;
 }*/
+section.why-us {
+    overflow-x: hidden;
+}
 section.why-us .why-us-bg {
     background-image: url(../images/chef-l1.jpg);
     background-repeat: repeat;
