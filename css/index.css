@@ -396,7 +396,14 @@ footer.footer ul li span.time {
         min-height: 500px;
     }
 }
-
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+}
 
 
 
