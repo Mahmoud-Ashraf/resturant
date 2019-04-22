@@ -13,33 +13,35 @@ $(document).ready(function() {
         }, 1000);
     });
 
-    $(window).scroll(function() {
+    if ($(window).width() > 992) {
+        $(window).scroll(function() {
 
-        if ($(window).scrollTop() > 200) {
-            $("header.header-navbar .navbar-social").removeClass("d-lg-block");
-            $("header.header-navbar").css({
-                'background-color':'#111',
-                'position':'fixed'
-            });
-        }else {
-            $("header.header-navbar .navbar-social").addClass("d-lg-block");
-            $("header.header-navbar").css({
-                'background-color':'transparent',
-                'position':'absolute'
-            });
-        }
-        
-        // Sync Sections To Navbar
-        $('section').each(function() {
-            if ($(window).scrollTop() > $(this).offset().top) {
-                var blockId = $(this).attr('id');
-                $("nav.navbar .navbar-nav a").removeClass("active");                
-                $('nav.navbar .navbar-nav a[data-scroll="' + blockId + '"]').addClass("active");
+            if ($(window).scrollTop() > 200) {
+                $("header.header-navbar .navbar-social").removeClass("d-lg-block");
+                $("header.header-navbar").css({
+                    'background-color':'#111',
+                    'position':'fixed'
+                });
+            }else {
+                $("header.header-navbar .navbar-social").addClass("d-lg-block");
+                $("header.header-navbar").css({
+                    'background-color':'transparent',
+                    'position':'absolute'
+                });
             }
-        });
-
+            
+            // Sync Sections To Navbar
+            $('section').each(function() {
+                if ($(window).scrollTop() > $(this).offset().top) {
+                    var blockId = $(this).attr('id');
+                    $("nav.navbar .navbar-nav a").removeClass("active");                
+                    $('nav.navbar .navbar-nav a[data-scroll="' + blockId + '"]').addClass("active");
+                }
+            });
         
-    });
+            
+        });
+    }
     $(window).scroll(function() {
         if ($(window).scrollTop() > 1000) {
             $(".to-up").css({

@@ -395,6 +395,10 @@ footer.footer ul li span.time {
     .why-us-bg {
         min-height: 500px;
     }
+    header.header-navbar {
+        position: fixed;
+        background-color: #111;
+    }
 }
 @media (max-width: 768px) {
     h1 {
